@@ -113,7 +113,7 @@ var map = L.map('map', {
 });
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 const basicBeachIcon = L.icon({
-  iconUrl: 'https://raw.githubusercontent.com/shacheeswadia/leaflet-map/main/beach-icon-chair.svg',
+  iconUrl: '/images/sensor.png',
   iconSize: [40, 40],
 });
 
@@ -121,21 +121,15 @@ const basicBeachIcon = L.icon({
 
 
 
-const marker1 = L.marker([-5.936862410493668, 108.38733618586903], {icon: basicBeachIcon}).addTo(map);
-const marker2 = L.marker([-5.9320334062264335, 108.39036269390144], {icon: basicBeachIcon}).addTo(map);
-
-const marker3 = L.marker([-5.928207801394296, 108.38736771199436], {icon: basicBeachIcon}).addTo(map);
-
-const marker4 = L.marker([-5.926106843194279, 108.38345847245249], {icon: basicBeachIcon}).addTo(map);
-
-const marker5 = L.marker([-5.923943161465776, 108.37942312840927], {icon: basicBeachIcon}).addTo(map);
-
-const marker6 = L.marker([-5.9248525359788955, 108.37050123493871], {icon: basicBeachIcon}).addTo(map);
-
-const marker7 = L.marker([-5.929901105166583, 108.37151007094951], {icon: basicBeachIcon}).addTo(map);
-
-const marker8 = L.marker([-5.934259770592799, 108.37466268348328], {icon: basicBeachIcon}).addTo(map);
-const marker9 = L.marker([-5.936580197122688, 108.37772071764104], {icon: basicBeachIcon}).addTo(map);
+const marker1 = L.marker([-5.936862410493668, 108.38733618586903], {icon: basicBeachIcon}).bindPopup('Sensor 1 (id:34X1), Temperature: 22°C, Pressure: 202 dbar, Depth: 20m, Dissolved O2 level: 7 mg/L').addTo(map);
+const marker2 = L.marker([-5.9320334062264335, 108.39036269390144], {icon: basicBeachIcon}).bindPopup('Sensor 2 (id:34X2), Temperature: 25°C, Pressure: 204 dbar, Depth: 19.5m, Dissolved O2 level: 7.2 mg/L').addTo(map);
+const marker3 = L.marker([-5.928207801394296, 108.38736771199436], {icon: basicBeachIcon}).bindPopup('Sensor 3 (id:34X3), Temperature: 22°C, Pressure: 200 dbar, Depth: 20m, Dissolved O2 level: 7.5mg/L').addTo(map);
+const marker4 = L.marker([-5.926106843194279, 108.38345847245249], {icon: basicBeachIcon}).bindPopup('Sensor 4 (id:34X4), Temperature: 22°C,Pressure: 210 dbar, Depth: 20.1m, Dissolved O2 level: 7.3 mg/L').addTo(map);
+const marker5 = L.marker([-5.923943161465776, 108.37942312840927], {icon: basicBeachIcon}).bindPopup('Sensor 5 (id:34X5), Temperature: 22°C,Pressure: 222 dbar, Depth: 20.9m, Dissolved O2 level: 7.4 mg/L').addTo(map);
+const marker6 = L.marker([-5.9248525359788955, 108.37050123493871], {icon: basicBeachIcon}).bindPopup('Sensor 6 (id:34X6), Temperature: 22°C,Pressure: 210 dbar, Depth: 21.7m, Dissolved O2 level: 7.1 mg/L').addTo(map);
+const marker7 = L.marker([-5.929901105166583, 108.37151007094951], {icon: basicBeachIcon}).bindPopup(' Sensor 7 (id:34X7), Temperature: 22°C,Pressure: 200 dbar, Depth: 22.4m, Dissolved O2 level: 7 mg/L').addTo(map);
+const marker8 = L.marker([-5.934259770592799, 108.37466268348328], {icon: basicBeachIcon}).bindPopup('Sensor 8 (id:34X8), Temperature: 22°C,Pressure: 203 dbar, Depth: 30m, Dissolved O2 level: 7.3 mg/L').addTo(map);
+const marker9 = L.marker([-5.936580197122688, 108.37772071764104], {icon: basicBeachIcon}).bindPopup('Sensor 9 (id:34X9), Temperature: 22°C,Pressure: 245 dbar, Depth: 23m, Dissolved O2 level: 7 mg/L').addTo(map);
 
 
 // const marker2 = L.marker([-5.936862410493668, 108.38733618586903], {icon: basicBeachIcon}).addTo(map);
