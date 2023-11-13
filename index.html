@@ -41,7 +41,7 @@
     font-size: 18px;
 }
         #navbar {
-            background: #000000;
+            background:rgba(170,211,223,255);
             padding: 10px 0;
             text-align: left;
         }
@@ -78,7 +78,13 @@
 
         h1 {
             text-align: center;
-            color: white;
+            color: rgb(37, 81, 130);
+            font-size: 25px;
+            margin-top: 10px;
+        }
+         h3 {
+            text-align: center;
+            color: rgb(10, 39, 73);
             font-size: 25px;
             margin-top: 10px;
         }
@@ -87,6 +93,28 @@
             height: 130px;
             width: auto;
         }
+          #parameter-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .parameter-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            }
+
+              #notice-board {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
     </style>
 </head>
 <body>
@@ -94,16 +122,53 @@
         <div class="navbar-content">
             <img src="/images/SCAR logo.png" alt="Company Logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Graph</a></li>
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#notice-board">Warnings</a></li>
             </ul>
         </div>
     </div>
     
     <div id="header">
-        <h1>Admin Dashboard</h1>
+        <h1><u>Admin Dashboard</u></h1>
+        <h3>Average sensor values of the island : </h3>
     </div>
+
+
+
+    <div id="parameter-section">
+        <div class="parameter-box" id="temperature-box">
+            <h2>Temperature</h2>
+            <p>22°C</p>
+        </div>
+        <div class="parameter-box" id="pressure-box">
+            <h2>Pressure</h2>
+            <p>202 dbar</p>
+        </div>
+        <div class="parameter-box" id="humidity-box">
+            <h2>Humidity</h2>
+            <p>70%</p>
+        </div>
+        <div class="parameter-box" id="parameter-box4">
+            <h2>Salinity</h2>
+            <p>40%</p>
+        </div>
+        <div class="parameter-box" id="parameter-box5">
+            <h2><Datag>Dissolved O2 level</Datag></h2>
+            <p>34.3%</p>
+        </div>
+
+    </div>
+
+
+
     <div id="map"></div>
+
+     <div id="notice-board">
+        <h2>Warnings!</h2>
+        <p>01/11/23 - There is a small risk of a cyclone in the Eastern part of the island.</p>
+    </div>
+
+
 <script>
 var map = L.map('map', {
     center: [-5.929185086462918, 108.38075224931472],
@@ -117,9 +182,6 @@ const basicBeachIcon = L.icon({
   iconSize: [40, 40],
 });
 
-// const marker1 = L.marker([-5.929185086462918, 108.38075224931472]).addTo(map);
-
-
 
 const marker1 = L.marker([-5.936862410493668, 108.38733618586903], {icon: basicBeachIcon}).bindPopup('Sensor 1 (id:34X1), Temperature: 22°C, Pressure: 202 dbar, Depth: 20m, Dissolved O2 level: 7 mg/L').addTo(map);
 const marker2 = L.marker([-5.9320334062264335, 108.39036269390144], {icon: basicBeachIcon}).bindPopup('Sensor 2 (id:34X2), Temperature: 25°C, Pressure: 204 dbar, Depth: 19.5m, Dissolved O2 level: 7.2 mg/L').addTo(map);
@@ -131,18 +193,10 @@ const marker7 = L.marker([-5.929901105166583, 108.37151007094951], {icon: basicB
 const marker8 = L.marker([-5.934259770592799, 108.37466268348328], {icon: basicBeachIcon}).bindPopup('Sensor 8 (id:34X8), Temperature: 22°C,Pressure: 203 dbar, Depth: 30m, Dissolved O2 level: 7.3 mg/L').addTo(map);
 const marker9 = L.marker([-5.936580197122688, 108.37772071764104], {icon: basicBeachIcon}).bindPopup('Sensor 9 (id:34X9), Temperature: 22°C,Pressure: 245 dbar, Depth: 23m, Dissolved O2 level: 7 mg/L').addTo(map);
 
-
-// const marker2 = L.marker([-5.936862410493668, 108.38733618586903], {icon: basicBeachIcon}).addTo(map);
-// const marker3 = L.marker([-5.9320334062264335, 108.39036269390144, {icon: basicBeachIcon}).addTo(map);
-// const marker4 = L.marker([-5.928207801394296, 108.38736771199436], {icon: basicBeachIcon}).addTo(map);
-// const marker5 = L.marker([-5.926106843194279, 108.38345847245249], {icon: basicBeachIcon}).addTo(map);
-// const marker6 = L.marker([-5.923943161465776, 108.37942312840927], {icon: basicBeachIcon}).addTo(map);
-// const marker7 = L.marker([-5.9248525359788955, 108.37050123493871], {icon: basicBeachIcon}).addTo(map);
-// const marker8 = L.marker([-5.929901105166583, 108.37151007094951], {icon: basicBeachIcon}).addTo(map);
-// const marker9 = L.marker([-5.934259770592799, 108.37466268348328], {icon: basicBeachIcon}).addTo(map);
-// const marker10 = L.marker([-5.936580197122688, 108.37772071764104], {icon: basicBeachIcon}).addTo(map);
 </script>
    
+
+
 </body>
 </html>
 
